@@ -11,6 +11,7 @@ def calc(value):
 
 
 browser = webdriver.Chrome()
+browser = webdrivergit
 browser.get("http://suninjuly.github.io/explicit_wait2.html")
 
 # говорим Selenium проверять в течение 5 секунд, пока кнопка не станет кликабельной
