@@ -1,1 +1,5 @@
-Marks/__pycache__/test_fixture8.cpython-38-pytest-6.2.4.pyc
+pytest_cache
+Fixtures\__pycache__
+Marks\__pycache__
+Marks\.pytest_cache
+.gitignore
