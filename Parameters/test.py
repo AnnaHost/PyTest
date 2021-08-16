@@ -1,3 +1,6 @@
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
 import pytest
 import time
@@ -5,6 +8,7 @@ import math
 
 
 answer = math.log(int(time.time()))
+
 
 links = ["https://stepik.org/lesson/236895/step/1",
          "https://stepik.org/lesson/236896/step/1",
@@ -22,13 +26,20 @@ def browser():
     options = webdriver.ChromeOptions()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
     browser = webdriver.Chrome(options=options)
-    browser.implicity_wait(7)
+    browser.implicitly_wait(7)
     yield browser
     print("\nquit browser..")
     browser.quit()
 
 
-@pytest.mark.parametrize('links', links)
-def test_guest_should_see_login_link(browser, links):
-    browser.get(links)
-    browser.find_element_by_taf_name("textarea").send_keys(str(answer))
+class TestMethodMainPage():
+
+    @pytest.mark.parametrize('links', links)
+    def test_guest_should_see_login_link(self, browser, links):
+        browser.get(links)
+        browser.find_element_by_tag_name("textarea").send_keys(str(answer))
+        button = WebDriverWait(browser, 7).until(
+            EC.element_to_be_clickable(By.CLASS_NAME, ("submit-submission")))
+        textr = WebDriverWait(browser, 7).until(
+            EC.visibility_of_element_located(By.ID, "ember169"), "Correct").text()
+        print(textr)
