@@ -3,3 +3,9 @@ Fixtures\__pycache__
 Marks\__pycache__
 Marks\.pytest_cache
 .gitignore
+Fixtures/__pycache__/test_fixture_autouse.cpython-38-pytest-6.2.4.pyc
+Fixtures/__pycache__/test_fixture1.cpython-38-pytest-6.2.4.pyc
+Fixtures/__pycache__/test_fixture2.cpython-38-pytest-6.2.4.pyc
+Fixtures/__pycache__/test_fixture3.cpython-38-pytest-6.2.4.pyc
+Fixtures/__pycache__/test_fixture5.cpython-38-pytest-6.2.4.pyc
+Marks/__pycache__/test_fixture8.cpython-38-pytest-6.2.4.pyc
