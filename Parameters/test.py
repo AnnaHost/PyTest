@@ -7,7 +7,10 @@ import time
 import math
 
 
-links = ["https://stepik.org/lesson/236895/step/1"]
+links = ["https://stepik.org/lesson/236895/step/1",
+         "https://stepik.org/lesson/236896/step/1",
+         "https://stepik.org/lesson/236897/step/1",
+         "https://stepik.org/lesson/236898/step/1", ]
 
 
 @pytest.fixture(scope="function")
@@ -23,11 +26,10 @@ def browser():
 
 class TestMethodMainPage():
 
-    totalName = ""
-
     @pytest.mark.parametrize('links', links)
-    def test_guest_should_see_login_link(self, browser, links):
+    def test_guest_should_see_login_link(self,  browser, links):
         browser.get(links)
+        totalName = " "
         answer = str(math.log(int(time.time())))
         area = WebDriverWait(browser, 10).until(
             EC.visibility_of_element_located((By.TAG_NAME, "textarea")))
@@ -37,6 +39,6 @@ class TestMethodMainPage():
         button.click()
         textr = WebDriverWait(browser, 10).until(
             EC.visibility_of_element_located((By.CSS_SELECTOR, ".smart-hints__hint")))
-        print(textr.text())
-        if textr != "Correct!":
-            self.totalName += textr.text()
+        if (textr.text != "Correct!"):
+            totalName += textr.text
+        print(f"\n{totalName}")
