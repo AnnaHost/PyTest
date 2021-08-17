@@ -10,26 +10,20 @@ import math
 links = ["https://stepik.org/lesson/236895/step/1",
          "https://stepik.org/lesson/236896/step/1",
          "https://stepik.org/lesson/236897/step/1",
-         "https://stepik.org/lesson/236898/step/1", ]
+         "https://stepik.org/lesson/236898/step/1",
+         "https://stepik.org/lesson/236899/step/1",
+         "https://stepik.org/lesson/236903/step/1",
+         "https://stepik.org/lesson/236904/step/1",
+         "https://stepik.org/lesson/236905/step/1"]
 
-
-@pytest.fixture(scope="function")
-def browser():
-    print("\nstart browser for test..")
-    options = webdriver.ChromeOptions()
-    options.add_experimental_option('excludeSwitches', ['enable-logging'])
-    browser = webdriver.Chrome(options=options)
-    yield browser
-    print("\nquit browser..")
-    # browser.quit()
+totalName = " "
 
 
 class TestMethodMainPage():
 
-    @pytest.mark.parametrize('links', links)
+    @pytest.mark.parametrize('links, totalName', links)
     def test_guest_should_see_login_link(self,  browser, links):
         browser.get(links)
-        totalName = " "
         answer = str(math.log(int(time.time())))
         area = WebDriverWait(browser, 10).until(
             EC.visibility_of_element_located((By.TAG_NAME, "textarea")))
