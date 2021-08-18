@@ -1,0 +1,18 @@
+1629270191970	geckodriver	INFO	Listening on 127.0.0.1:13552
+1629270192590	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\gara\\AppData\\Local\\Temp\\rust_mozprofile0oBNEV"
+1629270218022	geckodriver	INFO	Listening on 127.0.0.1:1047
+1629270218553	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\gara\\AppData\\Local\\Temp\\rust_mozprofilepYnmoy"
+1629270219000	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\gara\\AppData\\Local\\Temp\\rust_mozprofilepYnmoy\\search.json.mozlz4", (void 0)))
+1629270222103	Marionette	INFO	Listening on port 1080
+1629270222259	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://selenium1py.pythonanywhere.com/es/catalogue/coders-at-work_207/, line 614: ReferenceError: oscar is not defined
+1629270225519	Marionette	INFO	Stopped listening on port 1080
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.error: services.settings: 
+  main/cfr-fxa Signature failed  TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x390076,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1030: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\gara\AppData\Local\Temp\rust_mozprofilepYnmoy\protections.sqlite

@@ -7,7 +7,6 @@ from selenium import webdriver
 link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
 
 
-@pytest
 def test_show_change_language(browser):
     browser.get(link)
     button = WebDriverWait(browser, 30).until(
