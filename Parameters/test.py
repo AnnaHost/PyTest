@@ -21,8 +21,8 @@ totalName = " "
 
 class TestMethodMainPage():
 
-    @pytest.mark.parametrize('links, totalName', links)
-    def test_guest_should_see_login_link(self,  browser, links):
+    @pytest.mark.parametrize('links, totalName', links, totalName)
+    def test_guest_should_see_login_link(self,  browser, links, totalName):
         browser.get(links)
         answer = str(math.log(int(time.time())))
         area = WebDriverWait(browser, 10).until(
